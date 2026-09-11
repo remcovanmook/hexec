@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
+# 2026 Remco van Mook (x.com/rvmnl) - Apache-2.0 - github.com/remcovanmook/hexec
 
 # >>> hget
 # Fetch a url to stdout. The body is a subshell, not a brace block, so the

@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
+# 2026 Remco van Mook (x.com/rvmnl) - Apache-2.0 - github.com/remcovanmook/hexec
 USAGE='usage: hexec [-n] <url> [<sha256-url>|<sha256>] [-- args...]
   -n   fetch and verify only, then print the path
 

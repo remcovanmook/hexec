@@ -1,5 +1,5 @@
 #!/usr/bin/env pwsh
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
+# 2026 Remco van Mook (x.com/rvmnl) - Apache-2.0 - github.com/remcovanmook/hexec
 # usage: hexec [-n] <url> [<sha256-url>|<sha256>] [args...]
 # PowerShell consumes a bare -- itself, so script arguments follow the checksum
 # directly rather than after a separator.

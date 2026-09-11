@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
+# 2026 Remco van Mook (x.com/rvmnl) - Apache-2.0 - github.com/remcovanmook/hexec
 # hexec - fetch, verify against a sha256, then run
 #
 # Built by "make portable" from bash/hget, bash/hexec, powershell/hget.ps1 and powershell/hexec.ps1. Do not edit here.
@@ -89,7 +89,7 @@ hget() (
 )
 # <<< hget
 
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
+# 2026 Remco van Mook (x.com/rvmnl) - Apache-2.0 - github.com/remcovanmook/hexec
 USAGE='usage: hexec [-n] <url> [<sha256-url>|<sha256>] [-- args...]
   -n   fetch and verify only, then print the path
 
@@ -267,7 +267,7 @@ function Invoke-Hget {
 
 function Invoke-Hexec
 {
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
+# 2026 Remco van Mook (x.com/rvmnl) - Apache-2.0 - github.com/remcovanmook/hexec
 # usage: hexec [-n] <url> [<sha256-url>|<sha256>] [args...]
 # PowerShell consumes a bare -- itself, so script arguments follow the checksum
 # directly rather than after a separator.

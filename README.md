@@ -329,7 +329,8 @@ macOS; ash passes on Alpine.
 
 ## Author and licence
 
-2026 Remco van Mook — [@remcovanmook](https://github.com/remcovanmook).
+2026 Remco van Mook — [@remcovanmook](https://github.com/remcovanmook) on
+GitHub, [@rvmnl](https://x.com/rvmnl) on X.
 Apache 2.0; see [LICENSE](LICENSE).
 
 Every tool carries the same line under its shebang, because these files are
