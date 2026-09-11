@@ -125,7 +125,7 @@ errors. `exit` makes the bash side stop no matter what.
 ### 2. Why the bash is not simply inside that function
 
 Because PowerShell parses function bodies whether or not it calls them, and a
-parse error anywhere stops the whole file. Every line of the fucntion has to be
+parse error anywhere stops the whole file. Every line of the function has to be
 legal PowerShell, and bash isn't.
 
 ```
@@ -294,9 +294,13 @@ grep -n 'hardcoded default URL' hexec.ps1
 ```
 
 There are **two** of them, because the file holds two programs: `DEFAULT_URL`
-in the bash half and `$DefaultUrl` in the PowerShell half. Both need the same
-value. They are named differently on purpose — PowerShell variables are
+in the bash half and `$DefaultUrl` in the PowerShell half. Both can be different
+values. They are named differently on purpose: PowerShell variables are
 case-insensitive, so `$URL` and the `$Url` parameter are the same variable.
+
+This is also the place where you might want to insert some OS-specific checks, so
+you can have different pieces of code you download for MacOS, BSD, Linux, 
+Windows 7, 32-bit editions, ...
 
 On Unix `hexec.ps1 -- --prefix=/opt` passes arguments to the installer while
 still using the defaults. PowerShell cannot express that: with no url to fill
