@@ -1,5 +1,5 @@
 #!/bin/sh
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/notcurl
+# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
 #
 # Builds the polyglot files in portable/ out of the bash and powershell sets.
 # Nothing is rewritten on the way through: each source contributes either its
@@ -15,7 +15,7 @@
 #                                the dispatch needs to humour it
 set -e
 cd "${0%/*}/.."
-A='# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/notcurl'
+A='# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec'
 
 block()   { sed -n '/^# >>> hget$/,/^# <<< hget$/p' "$1"; }   # the marked function
 body()    { tail -n +2 "$1"; }                                # whole file, no shebang

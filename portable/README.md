@@ -84,7 +84,7 @@ exactly why it survives on Windows, where `true` and `test` do not exist.
 
 ### 1. The dispatch
 
-Six lines, and both languages read all six:
+Five lines, working in both languages:
 
 ```sh
 function run_bash_half {
@@ -99,23 +99,24 @@ yields the default: the words `run_bash_half "$@"`. The expansion is unquoted,
 so it word-splits into a command and its arguments, and bash calls the function
 with the script's arguments.
 
-**PowerShell** defines the function too, and never calls it. `${...}` delimits a
+**PowerShell** defines the function too, but never calls it. `${...}` delimits a
 variable name, not an expression, so the entire `undef:-run_bash_half "$@"` is
 read as the name of one undefined variable, which evaluates to `$null`. A
 statement whose value is `$null` emits nothing: no output, no error, execution
 continues to the next line.
 
-That body is valid PowerShell syntax — a command, a string with a subexpression,
-and `exit` — which is all that matters, because PowerShell never calls it.
+The body of the function is valid PowerShell syntax: a command, a string with a
+subexpression, and `exit`, which is all that matters, as long as it's never
+executed.
 
 The identifier is arbitrary. It has only to be unset in bash, because PowerShell
 reads it as part of a name rather than as a variable —
 `${z:-run_bash_half "$@"}` dispatches identically.
 
-The arguments sit **inside** the braces, which is load-bearing in both
-directions: outside them PowerShell has a parse error, and any form that
-evaluates to a string rather than `$null` prints it. `hget` writes the response
-body to stdout, so a single stray line corrupts every download.
+The arguments have to sit **inside** the braces: outside them PowerShell has a 
+parse error, and any form that evaluates to a string rather than `$null` prints 
+it. `hget` writes the response body to stdout, so a single stray line corrupts 
+every download.
 
 The trailing `exit` is a guard. If the eval failed, `run_bash_half` would return
 and bash would carry on into the PowerShell section and print a wall of syntax
@@ -124,8 +125,8 @@ errors. `exit` makes the bash side stop no matter what.
 ### 2. Why the bash is not simply inside that function
 
 Because PowerShell parses function bodies whether or not it calls them, and a
-parse error anywhere stops the whole file. Every line of that body has to be
-legal PowerShell, and real shell is not:
+parse error anywhere stops the whole file. Every line of the fucntion has to be
+legal PowerShell, and bash isn't.
 
 ```
 for h in a b; do printf '%s\n' "$h"; done

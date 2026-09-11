@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/notcurl
+# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
 USAGE='usage: hget <url>'
 
 emulate -L zsh

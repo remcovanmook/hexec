@@ -145,8 +145,8 @@ Pick a set with `make install SET=zsh`.
 ## Install
 
 ```bash
-git clone https://github.com/remcovanmook/notcurl ~/src/notcurl
-cd ~/src/notcurl
+git clone https://github.com/remcovanmook/hexec ~/src/hexec
+cd ~/src/hexec
 sudo make install            # /usr/local/bin, override with PREFIX=
 ```
 

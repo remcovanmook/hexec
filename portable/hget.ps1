@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/notcurl
+# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
 # hget - fetch a url to stdout
 #
 # Built by "make portable" from bash/hget and powershell/hget.ps1. Do not edit here.

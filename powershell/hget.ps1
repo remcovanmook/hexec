@@ -1,5 +1,5 @@
 #!/usr/bin/env pwsh
-# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/notcurl
+# 2026 Remco van Mook @rvmnl - Apache-2.0 - github.com/remcovanmook/hexec
 # usage: hget <url>
 param([Parameter(Position = 0)][string]$Url)
 
